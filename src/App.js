@@ -6,6 +6,8 @@ import Description from "./components/Description";
 import ImageComponent from "./components/ImageComponent";
 import ToDoList from "./components/ToDoList";
 import BasicDateCalendar from "./components/BasicDateCalendar";
+import DailyQuote from "./components/DailyQuote";
+import WeatherWidget from "./components/WeatherWidget";
 
 
 
@@ -14,15 +16,14 @@ export default function App() {
   return (
     <Container maxWidth="lg">
       <Header />
-      <Stack direction={{
-        xs:"column",
-        sm:"row",
-      }} spacing={2} mt={2} id="todolist">
+      <Stack spacing={2} mt={2} id="todolist">
         <ToDoList />
         <Description />
-      </Stack>
+        <DailyQuote></DailyQuote>
+        <WeatherWidget />
         <ImageComponent />
         <BasicDateCalendar/>
+      </Stack>
     </Container>
   );
 }
